@@ -252,9 +252,25 @@ class My_List_Table extends WP_List_Table {
 		}
 	}
 
+	/**
+	 * @var array
+	 *
+	 * Array contains slug columns that you want hidden
+	 *
+	 */
+
 	private $hidden_columns = array(
 		'id'
 	);
+
+	/**
+	 * @return array
+	 *
+	 * The array is associative :
+	 * keys are slug columns
+	 * values are array of slug and a boolean that indicates if is sorted yet
+	 *
+	 */
 
 	function get_sortable_columns() {
 
