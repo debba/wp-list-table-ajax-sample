@@ -419,7 +419,8 @@ class My_List_Table extends WP_List_Table {
 }
 
 /**
- * Hook admin_menu for inserting a voice in Backend Menu
+ * Action admin_menu for inserting a voice in Backend Menu
+ * Render a page with sample table
  */
 
 function my_add_menu_items(){
