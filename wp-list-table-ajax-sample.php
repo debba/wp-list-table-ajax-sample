@@ -281,15 +281,35 @@ class My_List_Table extends WP_List_Table {
 		);
 	}
 
+	/**
+	 * @Override of prepare_items method
+	 *
+	 */
+
 	function prepare_items() {
 
+		/**
+		 * How many records for page do you want to show?
+		 */
 		$per_page = 5;
+
+		/**
+		 * Define of column_headers. It's an array that contains:
+		 * columns of List Table
+		 * hiddens columns of table
+		 * sortable columns of table
+		 * optionally primary column of table
+		 */
 		$columns  = $this->get_columns();
 		$hidden   = $this->hidden_columns;
 		$sortable = $this->get_sortable_columns();
-
 		$this->_column_headers = array($columns, $hidden, $sortable);
 
+		/**
+		 * Following lines are only a sample with a static array
+		 * in a real situation you can get data
+		 * from a REST architecture or from database (using $wpdb)
+		 */
 		$data = $this->sample_data;
 
 		function usort_reorder( $a, $b ) {
@@ -300,7 +320,10 @@ class My_List_Table extends WP_List_Table {
 			return ( 'asc' === $order ) ? $result : -$result;
 		}
 		usort( $data, 'usort_reorder' );
-
+		
+		/**
+		 * Get current page calling get_pagenum method
+		 */
 		$current_page = $this->get_pagenum();
 
 		$total_items = count($data);
@@ -309,6 +332,10 @@ class My_List_Table extends WP_List_Table {
 
 		$this->items = $data;
 
+		/**
+		 * Call to _set_pagination_args method for informations about
+		 * total items, items for page, total pages and ordering
+		 */
 		$this->set_pagination_args(
 			array(
 
