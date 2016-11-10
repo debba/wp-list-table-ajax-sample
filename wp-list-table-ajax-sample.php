@@ -209,6 +209,15 @@ class My_List_Table extends WP_List_Table {
 
 	}
 
+	/**
+	 * @return array
+	 *
+	 * The array is associative :
+	 * keys are slug columns
+	 * values are description columns
+	 *
+	 */
+
 	function get_columns() {
 
 		$columns = array(
@@ -220,6 +229,16 @@ class My_List_Table extends WP_List_Table {
 		return $columns;
 
 	}
+
+	/**
+	 * @param $item
+	 * @param $column_name
+	 *
+	 * @return mixed
+	 *
+	 * Method column_default let at your choice the rendering of everyone of column
+	 *
+	 */
 
 	function column_default( $item, $column_name ) {
 		switch( $column_name ) {
