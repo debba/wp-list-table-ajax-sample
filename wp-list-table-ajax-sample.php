@@ -190,6 +190,10 @@ class My_List_Table extends WP_List_Table {
 	/**
 	 *
 	 * @Override of constructor
+	 * Constructor take 3 parameters:
+	 * singular : name of an element in the List Table
+	 * plural : name of all of the elements in the List Table
+	 * ajax : if List Table supports AJAX set to true
 	 *
 	 */
 
