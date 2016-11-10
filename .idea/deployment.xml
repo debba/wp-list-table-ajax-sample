@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="Locale">
+    <serverData>
+      <paths name="Locale">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/wp-content/plugins/wp-list-table-ajax-sample" local="$PROJECT_DIR$" web="/wordpres/wp-admin/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>
