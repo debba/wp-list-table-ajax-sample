@@ -457,6 +457,10 @@ function wp_list_page() {
 
 }
 
+/**
+ * Action wp_ajax for fetching ajax_response
+ */
+
 function _ajax_fetch_sts_history_callback() {
 
 	$wp_list_table = new My_List_Table();
@@ -465,6 +469,10 @@ function _ajax_fetch_sts_history_callback() {
 }
 
 add_action( 'wp_ajax__ajax_fetch_sts_history', '_ajax_fetch_sts_history_callback' );
+
+/**
+ * Action wp_ajax for fetching the first time table structure
+ */
 
 function _ajax_sts_display_callback() {
 
@@ -479,17 +487,21 @@ function _ajax_sts_display_callback() {
 
 	die(
 
-	json_encode(array(
+		json_encode(array(
 
-		"display" => $display
+			"display" => $display
 
-	))
+		))
 
 	);
 
 }
 
 add_action('wp_ajax__ajax_sts_display', '_ajax_sts_display_callback');
+
+/**
+ * fetch_ts_script function based from Charlie's original function
+ */
 
 function fetch_ts_script() {
 	$screen = get_current_screen();
