@@ -9,7 +9,7 @@
  *
  * Plugin Name: WP List Table Ajax Sample
  * Plugin URI:  https://github.com/debba/wp-list-table-ajax-sample
- * Description: A sample plugin for studying how creating a AJAX List Table completly in async using WP_List_Table
+ * Description: A sample plugin for studying how can creating a AJAX List Table fully asynchronous using WP_List_Table
  * Version:     1.0
  * Author:      Andrea Debernardi
  * Author URI:  https://www.dueclic.com
@@ -47,8 +47,8 @@ if ( ! class_exists( 'WP_List_Table' ) )
 
 /**
  *
- * As suggested from Charlie in its plugin https://github.com/Askelon/Custom-AJAX-List-Table-Example
- * it's better to set error_reporting hiding notices to avoid AJAX errors
+ * As Charlie suggested in its plugin https://github.com/Askelon/Custom-AJAX-List-Table-Example
+ * it's better to set the error_reporting in order to hiding notices to avoid AJAX errors
  *
  */
 
@@ -186,6 +186,12 @@ class My_List_Table extends WP_List_Table {
 		)
 
 	);
+
+	/**
+	 *
+	 * @Override of constructor
+	 *
+	 */
 
 	function __construct() {
 
