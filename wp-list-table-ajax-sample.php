@@ -348,10 +348,20 @@ class My_List_Table extends WP_List_Table {
 		);
 	}
 
+	/**
+	 * @Override of display method
+	 */
+
 	function display() {
 
+		/**
+		 * Adds a nonce field
+		 */
 		wp_nonce_field( 'ajax-custom-list-nonce', '_ajax_custom_list_nonce' );
 
+		/**
+		 * Adds field order and orderby
+		 */
 		echo '<input type="hidden" id="order" name="order" value="' . $this->_pagination_args['order'] . '" />';
 		echo '<input type="hidden" id="orderby" name="orderby" value="' . $this->_pagination_args['orderby'] . '" />';
 
