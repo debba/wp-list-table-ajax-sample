@@ -8,14 +8,14 @@
  * It is a fork of Charlie MERLAND's Custom List Table Example plugin.
  *
  * Plugin Name: WP List Table Ajax Sample
- * Plugin URI:  TODO
+ * Plugin URI:  https://github.com/debba/wp-list-table-ajax-sample
  * Description: A sample plugin for studying how creating a AJAX List Table completly in async using WP_List_Table
  * Version:     1.0
  * Author:      Andrea Debernardi
  * Author URI:  https://www.dueclic.com
  * License:     GPL-2.0
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
- * GitHub Plugin URI: TODO
+ * GitHub Plugin URI: https://github.com/debba/wp-list-table-ajax-sample
  */
 
 /**
