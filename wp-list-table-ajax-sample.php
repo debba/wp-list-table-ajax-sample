@@ -368,6 +368,10 @@ class My_List_Table extends WP_List_Table {
 		parent::display();
 	}
 
+	/**
+	 * @Override ajax_response method
+	 */
+
 	function ajax_response() {
 
 		check_ajax_referer( 'ajax-custom-list-nonce', '_ajax_custom_list_nonce' );
@@ -414,8 +418,12 @@ class My_List_Table extends WP_List_Table {
 
 }
 
+/**
+ * Hook admin_menu for inserting a voice in Backend Menu
+ */
+
 function my_add_menu_items(){
-	add_menu_page('WP List Table Ajax Sample', 'WP List Table Ajax Sample', 'activate_plugins', 'wp_ajax_list_test', 'wp_list_page');
+	add_menu_page('WP List Table Ajax', 'WP List Table Ajax Sample', 'activate_plugins', 'wp_ajax_list_test', 'wp_list_page');
 }
 
 add_action('admin_menu', 'my_add_menu_items');
