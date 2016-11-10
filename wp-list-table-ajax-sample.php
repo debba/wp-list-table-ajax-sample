@@ -320,7 +320,7 @@ class My_List_Table extends WP_List_Table {
 			return ( 'asc' === $order ) ? $result : -$result;
 		}
 		usort( $data, 'usort_reorder' );
-		
+
 		/**
 		 * Get current page calling get_pagenum method
 		 */
